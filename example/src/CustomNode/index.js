@@ -37,6 +37,7 @@ const CustomNodeFlow = () => {
             data: {
               ...e.data,
               color,
+              toggle: !e.data.toggle
             },
           };
         })
@@ -48,7 +49,7 @@ const CustomNodeFlow = () => {
       {
         id: '2',
         type: 'selectorNode',
-        data: { onChange: onChange, color: initBgColor },
+        data: { onChange: onChange, color: initBgColor, toggle: false },
         style: { border: '1px solid #777', padding: 10 },
         position: { x: 250, y: 50 },
       },
